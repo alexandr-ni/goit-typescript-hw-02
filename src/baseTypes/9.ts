@@ -20,4 +20,6 @@ const page2 = {
   status: 'close',
 }
 
+type combinePages = typeof page1 & typeof page2;
+
 export {};
