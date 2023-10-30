@@ -4,8 +4,8 @@
 */
 
 interface KeyValuePair<T, U> {
-  key: Partial<T>;
-  value: Partial<U>;
+  key: T;
+  value: U;
 }
 
 export {};

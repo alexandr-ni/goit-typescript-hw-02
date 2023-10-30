@@ -2,7 +2,18 @@
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
 
-const page1 = {
+type CombinePages = {
+  title: string;
+  likes: number;
+  accounts: string[];
+  status: "open" | "close";
+  details?: {
+    createAt: Date;
+    updateAt: Date;
+  };
+};
+
+const page1: CombinePages = {
   title: "The awesome page",
   likes: 100,
   accounts: ["Max", "Anton", "Nikita"],
@@ -13,24 +24,11 @@ const page1 = {
   },
 };
 
-const page2 = {
+const page2: CombinePages = {
   title: "Python or Js",
   likes: 5,
   accounts: ["Alex"],
   status: "close",
-};
-
-type CombinePages = typeof page1 & typeof page2;
-
-const combinePages: CombinePages = {
-  title: "Cool site",
-  likes: 20,
-  accounts: ["Sam", "Adam"],
-  status: "open",
-  details: {
-    createAt: new Date("2022-01-01"),
-    updateAt: new Date("2022-05-01"),
-  },
 };
 
 export {};
